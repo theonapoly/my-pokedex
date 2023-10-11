@@ -1,9 +1,4 @@
-function Navbar({
-  pokemonList,
-  handleClickPrev,
-  handleClickNext,
-  pokemonIndex,
-}) {
+function Navbar({ pokemonList, pokemonIndex, handlePokeChange, pokemon }) {
   //state (état, données)
 
   //comportements (dynamique)
@@ -11,10 +6,11 @@ function Navbar({
   //affichage (render)
   return (
     <nav>
-      {pokemonIndex > 0 && <button onClick={handleClickPrev}>Précédent</button>}
-      {pokemonIndex < pokemonList.length - 1 && (
-        <button onClick={handleClickNext}>Suivant</button>
-      )}
+      {pokemonList.map((poke, index) => (
+        <button key={index} onClick={() => handlePokeChange(index)}>
+          {poke.name}
+        </button>
+      ))}
     </nav>
   );
 }

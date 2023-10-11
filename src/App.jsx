@@ -11,22 +11,18 @@ function App() {
   console.log(pokemonIndex);
 
   //comportements (dynamique)
-  const handleClickPrev = () => {
-    setPokemonIndex(pokemonIndex - 1);
+  const handlePokeChange = (index) => {
+    setPokemonIndex(index);
   };
 
-  const handleClickNext = () => {
-    setPokemonIndex(pokemonIndex + 1);
-  };
   //affichage (render)
 
   return (
     <div>
       <Navbar
-        handleClickPrev={handleClickPrev}
         pokemonList={pokemonList}
-        handleClickNext={handleClickNext}
         pokemonIndex={pokemonIndex}
+        handlePokeChange={handlePokeChange}
       />
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
     </div>
@@ -41,9 +37,29 @@ const pokemonList = [
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
   },
   {
+    name: "Ivysaur",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+  },
+  {
+    name: "Venusaur",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+  },
+  {
     name: "Charmander",
     imgSrc:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+  },
+  {
+    name: "Charmeleon",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png",
+  },
+  {
+    name: "Charizard",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
   },
   {
     name: "Squirtle",
@@ -51,12 +67,69 @@ const pokemonList = [
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
   },
   {
-    name: "Pikachu",
+    name: "Wartortle",
     imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png",
   },
   {
-    name: "Mew",
+    name: "Blastoise",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png",
+  },
+  {
+    name: "Caterpie",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png",
+  },
+  {
+    name: "Metapod",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/11.png",
+  },
+  {
+    name: "Butterfree",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/12.png",
+  },
+  {
+    name: "Weedle",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/13.png",
+  },
+  {
+    name: "Kakuna",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/14.png",
+  },
+  {
+    name: "Beedrill",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/15.png",
+  },
+  {
+    name: "Pidgey",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/16.png",
+  },
+  {
+    name: "Pidgeotto",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png",
+  },
+  {
+    name: "Pidgeot",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/18.png",
+  },
+  {
+    name: "Rattata",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/19.png",
+  },
+  {
+    name: "Raticate",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/20.png",
   },
 ];
 
