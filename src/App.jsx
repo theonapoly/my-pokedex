@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
+import Navbar from "./components/NavBar";
 
 function App() {
   //state (état, données)
@@ -21,14 +22,17 @@ function App() {
 
   return (
     <div>
+      <Navbar
+        handleClickPrev={handleClickPrev}
+        pokemonList={pokemonList}
+        handleClickNext={handleClickNext}
+        pokemonIndex={pokemonIndex}
+      />
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-      {pokemonIndex > 0 && <button onClick={handleClickPrev}>Précédent</button>}
-      {pokemonIndex < pokemonList.length - 1 && (
-        <button onClick={handleClickNext}>Suivant</button>
-      )}
     </div>
   );
 }
+
 // données
 const pokemonList = [
   {

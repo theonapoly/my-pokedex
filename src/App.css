@@ -5,7 +5,8 @@
   text-align: center;
 }
 button {
-  margin-inline: 1rem;
+  margin: 1rem;
+  width: 8rem;
 }
 .logo {
   height: 6em;
