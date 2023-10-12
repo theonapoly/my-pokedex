@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -9,6 +10,10 @@ function App() {
   //state (état, données)
   const [pokemonIndex, setPokemonIndex] = useState(0);
   console.log(pokemonIndex);
+
+  useEffect(() => {
+    alert("Hello!");
+  }, []);
 
   //comportements (dynamique)
   const handlePokeChange = (index) => {
@@ -130,6 +135,36 @@ const pokemonList = [
     name: "Raticate",
     imgSrc:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/20.png",
+  },
+  {
+    name: "Spearow",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/21.png",
+  },
+  {
+    name: "Fearow",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/22.png",
+  },
+  {
+    name: "Ekans",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/23.png",
+  },
+  {
+    name: "Arbok",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/24.png",
+  },
+  {
+    name: "Pikachu",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+  },
+  {
+    name: "Raichu",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png",
   },
 ];
 
